@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(252, 246, 238);
+}
+
+.face {
+  position: relative;
+}
+
+.ear {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid rgb(254, 218, 174);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-radius: 10px;
+}
+
+.ear:nth-of-type(1) {
+  top: 100px;
+  left: 250px;
+  transform: rotate(-10deg);
+}
+.ear:nth-of-type(2) {
+  top: 110px;
+  left: 380px;
+  transform: rotate(15deg);
+}
+
+.eye,
+.nose {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 9px solid black;
+}
+
+.eye {
+  border-radius: 50%;
+  top: 202px;
+}
+
+.eye:nth-of-type(3) {
+  left: 265px;
+}
+.eye:nth-of-type(4) {
+  left: 345px;
+}
+
+.face:hover .eye {
+  display: none;
+}
+
+.face:hover .eye2 {
+  display: block;
+}
+
+.face:hover,
+.body {
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+.eye2 {
+  position: relative;
+  display: none;
+}
+
+.eye2 div {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: black;
+}
+
+.eye2 div:nth-of-type(1) {
+  transform: rotate(100deg);
+  top: 200px;
+  left: 270px;
+}
+.eye2 div:nth-of-type(2) {
+  transform: rotate(-100deg);
+  top: 208px;
+  left: 270px;
+}
+
+.eye2 div:nth-of-type(3) {
+  transform: rotate(-100deg);
+  top: 200px;
+  left: 350px;
+}
+.eye2 div:nth-of-type(4) {
+  transform: rotate(100deg);
+  top: 208px;
+  left: 350px;
+}
+
+.nose {
+  border-radius: 0 0 50% 50%;
+  top: 250px;
+  left: 300px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.body {
+  position: relative;
+}
+
+.hair {
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  border-radius: 0% 50%;
+  background-color: rgb(254, 218, 174);
+}
+
+.hair:nth-of-type(1) {
+  height: 30px;
+  top: 110px;
+  left: 320px;
+  transform: rotate(30deg);
+}
+.hair:nth-of-type(2) {
+  height: 40px;
+  top: 100px;
+  left: 340px;
+  transform: rotate(40deg);
+}
+.hair:nth-of-type(3) {
+  height: 30px;
+  top: 150px;
+  left: 200px;
+  transform: rotate(100deg);
+}
+.hair:nth-of-type(4) {
+  top: 160px;
+  left: 190px;
+  transform: rotate(90deg);
+}
+.hair:nth-of-type(5) {
+  top: 190px;
+  left: 190px;
+  transform: rotate(65deg);
+}
+.hair:nth-of-type(6) {
+  height: 40px;
+  top: 240px;
+  left: 200px;
+  transform: rotate(40deg);
+}
+.hair:nth-of-type(7) {
+  top: 280px;
+  left: 230px;
+  transform: rotate(20deg);
+}
+.hair:nth-of-type(8) {
+  height: 30px;
+  top: 290px;
+  left: 260px;
+  transform: rotate(-10deg);
+}
+.hair:nth-of-type(9) {
+  top: 300px;
+  left: 300px;
+  transform: rotate(10deg);
+}
+.hair:nth-of-type(10) {
+  height: 30px;
+  top: 300px;
+  left: 320px;
+  transform: rotate(-10deg);
+}
+.hair:nth-of-type(11) {
+  height: 30px;
+  top: 290px;
+  left: 340px;
+  transform: rotate(10deg);
+}
+.hair:nth-of-type(12) {
+  top: 280px;
+  left: 380px;
+  transform: rotate(-20deg);
+}
+.hair:nth-of-type(13) {
+  height: 30px;
+  top: 270px;
+  left: 400px;
+  transform: rotate(-25deg);
+}
+.hair:nth-of-type(14) {
+  height: 40px;
+  top: 240px;
+  left: 420px;
+  transform: rotate(-40deg);
+}
+.hair:nth-of-type(15) {
+  height: 30px;
+  top: 220px;
+  left: 430px;
+  transform: rotate(-70deg);
+}
+.hair:nth-of-type(16) {
+  top: 180px;
+  left: 440px;
+  transform: rotate(-90deg);
+}
+.hair:nth-of-type(17) {
+  height: 30px;
+  top: 150px;
+  left: 440px;
+  transform: rotate(-100deg);
+}
+.hair:nth-of-type(18) {
+  height: 30px;
+  top: 170px;
+  left: 440px;
+  transform: rotate(-80deg);
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
